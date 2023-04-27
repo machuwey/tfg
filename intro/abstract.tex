@@ -1,13 +1,48 @@
+\documentclass{book}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{lipsum}
+\usepackage{booktabs}
+
+\begin{document}
+
 \begingroup
 \chapter{Resumen}
-    \lipsum[2-4]
-
-    \textbf{\\\large Palabras clave: }
+\lipsum[2-4]
+\textbf{\\\large Palabras clave: }
 
 \chapter{Abstract}
-    \lipsum[2-4]
-    
-    \textbf{\\\large Keywords: }
+\lipsum[2-4]
+
+\textbf{\\\large Keywords: }
 \endgroup
 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|m{3cm}|m{10cm}|}
+        \hline
+        \rowcolor{blue!20} Primary Actors        & Usuario                   \\
+        \hline
+        Level                                    & N/A                       \\
+        \hline
+        \rowcolor{blue!20} Complexity            & Low                       \\
+        \hline
+        Use Case Status                          & N/A                       \\
+        \hline
+        \rowcolor{blue!20} Implementation Status & N/A                       \\
+        \hline
+        Preconditions                            & N/A                       \\
+        \hline
+        \rowcolor{blue!20} Post-conditions       & N/A                       \\
+        \hline
+        Author                                   & Matvey Dergunov Bushmanov \\
+        \hline
+        \rowcolor{blue!20} Assumptions           & N/A                       \\
+        \hline
+    \end{tabular}
+    \caption{Abandonar grupo Requirements Spec}
+\end{table}
+
 \tableofcontents
+
+\end{document}
