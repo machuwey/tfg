@@ -26,3 +26,4 @@ jobs:
         commit-message: 'Update PDF'
         target-folder: '.'
         clean: true
+        token: ${{ secrets.GH_PATH }}
