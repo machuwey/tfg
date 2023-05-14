@@ -1,0 +1,36 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Chatear (CU07) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario puede interactuar con otros miembros del grupo mediante el envío y recepción de mensajes en tiempo real. \\
+        \hline
+        Precondiciones & El usuario debe estar registrado, tener la sesión iniciada y ser miembro del grupo en cuestión. \\
+        \hline
+        \rowcolor{blue!20} Postcondiciones & El mensaje enviado por el usuario es visible para todos los miembros del grupo. \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario selecciona el grupo
+            \item El sistema presenta la interfaz de chat del grupo
+            \item El usuario escribe un mensaje en el cuadro de texto
+            \item El usuario pulsa en el botón \enquote{Enviar}
+            \item El sistema envía el mensaje a todos los miembros del grupo
+            \end{enumerate}
+         \\
+        \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[4.1] El cuadro de texto está vacío
+            \begin{enumerate}[noitemsep]
+                \item[4.1.1] El sistema no permite el envío del mensaje
+                \item[4.1.2] El usuario escribe un mensaje en el cuadro de texto
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Chatear (CU07)}
+\end{table}

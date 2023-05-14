@@ -1,0 +1,38 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Unirse a grupo (CU04) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario podrá explorar los grupos disponibles cercanos a través de un mapa, pudiendo ver la información básica de estos como el lugar, número actual de integrantes y descripción del grupo. El usuario tiene la posibilidad de unirse al grupo. \\
+        \hline
+        Precondiciones & El usuario se encuentra en la vista de mapa \\
+        \hline
+        \rowcolor{blue!20} Postcondiciones & Queda registrada la membresía del usuario al grupo en el sistema \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario explora el mapa buscando grupos cercanos
+            \item El usuario selecciona un grupo de interés
+            \item El sistema muestra una pantalla de detalles sobre el grupo, con un botón de \endquote{Unirse}
+            \item El usuario selecciona el botón de \enquote{Unirse}
+            \item El sistema registra en la base de datos la nueva membresía
+            \item El usuario es redirigido al chat del grupo
+            \end{enumerate}
+         \\
+        \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[3.1] El sistema comprueba que el usuario ya forma parte del grupo
+            \begin{enumerate}[noitemsep]
+                \item[3.1.1] El sistema ofrece la opción de \enquote{Salir del grupo}
+                \item[3.1.2] El usuario cierra la pantalla de detalles del grupo
+                \item[3.1.3] El usuario sigue explorando grupos en la vista de mapa
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Unirse a un grupo (CU04)}
+\end{table}

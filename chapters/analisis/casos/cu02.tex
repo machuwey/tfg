@@ -1,0 +1,38 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Iniciar Sesión (CU02) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario, con el correo electrónico y contraseña creada durante el registro, podrá iniciar sesión en la aplicación. \\
+        \hline
+        Precondiciones & El usuario tiene que tener la aplicación abierta y cuenta registrada \\
+        \hline
+        \rowcolor{blue!20} Postcondiciones & El usuario tiene la sesión iniciada y se encuentra en la pantalla principal \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario introduce su correo y contraseña
+            \item El usuario realiza click en \enquote{Iniciar sesión}
+            \item El sistema comprueba los datos y realiza el inicio de sesión
+            \item El usuario es redirigido a la pantalla principal
+            \end{enumerate}
+         \\
+        \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[3.1] Correo electrónico no confirmado
+            \begin{enumerate}[noitemsep]
+                \item[3.1.1] El sistema comprueba que el correo no está confirmado, muestra una pantalla
+                \item[3.1.2] El usuario da click en \enquote{Reenviar confirmación}
+                \item[3.1.3] El sistema envía un correo de confirmación
+                \item[3.1.4] El usuario confirma el correo electrónico
+                \item[3.1.5] El usuario vuelve a iniciar sesión 
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Iniciar Sesión (CU02)}
+\end{table}

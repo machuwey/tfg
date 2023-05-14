@@ -1,0 +1,41 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Abandonar grupo (CU05) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario podrá salir del grupo en cualquier momento, en caso de que sea el último miembro al momento de salir, tendrá la opción de eliminar el grupo \\
+        \hline
+        Pre-condiciones & El usuario es miembro del grupo \\
+        \hline
+        \rowcolor{blue!20} Post-condiciones & El usuario deja de ser miembro del grupo \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario selecciona el listado de grupos
+            \item Selecciona el grupo que quiere abandonar
+            \item En el chat, pulsa sobre el nombre del grupo
+            \item El sistema muestra los detalles del grupo
+            \item El usuario pulsa en \enquote{Abandonar}
+            \item El sistema muestra una alerta de confirmación
+            \item El usuario pulsa \enquote{Confirmar}
+            \item El usuario es redirigido al listado de grupos
+            \end{enumerate}
+         \\
+        \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[6.1] Es el último miembro del grupo
+            \begin{enumerate}[noitemsep]
+                \item[6.1.1] El sistema muestra un mensaje de eliminar grupo
+                \item[6.1.2] El usuario confirma la acción
+                \item[6.1.3] El sistema elimina el grupo
+                \item[6.1.4] El usuario es redirigido al listado de grupos
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Abandonar grupo (CU05)}
+\end{table}

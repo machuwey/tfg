@@ -1,0 +1,46 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Registrarse (CU01) \\
+        \hline
+        Actor & Visitante \\
+        \hline
+        \rowcolor{blue!20} Descripción & El visitante se dará de alta en la aplicación aportando los datos necesarios como son el correo electrónico, contraseña, nombre de usuario y localización preferida. \\
+        \hline
+        Precondiciones & El usuario debe tener la aplicación instalada \\
+        \hline
+        \rowcolor{blue!20} Postcondiciones & El usuario queda registrado en el sistema \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El visitante abre la aplicación
+            \item Selecciona \enquote{Darse de alta}
+            \item Rellena el formulario con los datos necesarios
+            \item Acepta las condiciones de uso
+            \item Pulsa \enquote{Confirmar}
+            \item El sistema muestra mensaje de espera de confirmación de correo
+            \item El usuario accede a su buzón y confirma el correo
+            \item El usuario vuelve a la aplicación y pulsa \enquote{Correo confirmado}
+            \item El sistema comprueba el estado de confirmación
+            \item El usuario es redirigido a la pantalla principal
+            \end{enumerate}
+         \\
+        \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[1.1] El correo ya está registrado
+            \begin{enumerate}[noitemsep]
+                \item[1.1.1] El sistema muestra un mensaje de error
+                \item[1.1.2] El visitante introduce un correo diferente
+            \end{enumerate}
+            \item[1.2] Los datos introducidos son inválidos
+            \begin{enumerate}[noitemsep]
+                \item[1.2.1] El sistema muestra un mensaje de error
+                \item[1.2.2] El visitante corrige los datos
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Registrarse (CU01)}
+\end{table}

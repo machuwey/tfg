@@ -1,0 +1,36 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Cerrar Sesión (CU3) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario podrá cerrar su sesión en la aplicación desde la configuración de perfil. \\
+        \hline
+        Precondiciones & El usuario tiene que tener la sesión iniciada y se encuentra en la configuración de perfil \\
+        \hline
+        \rowcolor{blue!20} Postcondiciones & El usuario tiene la sesión cerrada \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario se encuentra en la configuración de perfil
+            \item El usuario selecciona \enquote{Cerrar Sesión}
+            \item El sistema muestra una pantalla de confirmación
+            \item El usuario selecciona \enquote{Confirmar}
+            \item El sistema cierra la sesión del usuario
+            \end{enumerate}
+         \\
+        \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[3.1] El usuario selecciona \enquote{Cancelar} en la pantalla de confirmación
+            \begin{enumerate}[noitemsep]
+                \item[3.1.1] El sistema cancela el cierre de sesión
+                \item[3.1.2] El usuario permanece en la configuración de perfil
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Cerrar Sesión (CU3)}
+\end{table}
