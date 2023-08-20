@@ -6,7 +6,7 @@ Para poder empezar con la implementación es de vital importancia definir cuále
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\linewidth]{images/Screenshot 2023-05-17 at 21.26.11.png}
+        \includegraphics[width=0.9\linewidth]{images/diagramaLógicoV3.png}
         \caption{Modelo lógico de datos}
         \label{fig:diagramaER}
     \end{figure}
@@ -23,6 +23,12 @@ Un mensaje es una entidad que representa la comunicación entre usuarios dentro 
 
 \subsubsection{Membresía}
 La membresía es una entidad intermedia que representa la relación entre los usuarios y los grupos. Es decir, denota que un usuario se ha unido a un grupo. Cada membresía tiene un identificador único, el identificador del usuario, el identificador del grupo, y una marca de tiempo de cuando el usuario se unió al grupo.
+
+\subsubsection{Evento}
+El entidad evento viene siempre asociada a un grupo, este describe el encuentro de grupo. Mantiene campos como título, descripción, marca de tiempo, fecha de celebración y un campo booleano que identifica la flexibilidad horaria.
+
+\subsubsection{Asistencia}
+La asistencia como su nombre indica, identifica la asistencia de un usuario a un evento. Tiene un identificador compuesto por dos claves foráneas, en este caso los identificadores de evento y usuario. Así como dos campos opcionales de tipo marca de tiempo que identifican la preferencia del tiempo de comienzo y final del evento en el caso en el que este último permita la flexibilidad horaria.
 
 \begin{comment}
 \subsection{Aspectos de Seguridad}
