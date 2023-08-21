@@ -1,0 +1,39 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Crear evento (CU08) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario podrá crear un nuevo evento dentro de un grupo proporcionando datos como lugar, fecha, hora y descripción del evento. \\
+        \hline
+        Pre-condiciones & El usuario tiene la sesión iniciada y es propietario del grupo en el que quiere crear el evento \\
+        \hline
+        \rowcolor{blue!20} Post-condiciones & Un nuevo evento queda registrado en la base de datos \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario selecciona el grupo en el que quiere crear el evento desde el listado de grupos
+            \item El usuario pulsa en el botón \enquote{Crear evento}
+            \item El sistema presenta un formulario
+            \item El usuario rellena el formulario con los datos del nuevo evento
+            \item El usuario pulsa en el botón \enquote{Crear}
+            \item El sistema comprueba los campos
+            \item El sistema registra el evento en la base de datos
+            \item El usuario es redirigido al chat del grupo
+            \end{enumerate}
+         \\
+         \hline
+        Flujo alternativo & 
+        \begin{enumerate}[noitemsep]
+            \item[4.1] Los datos introducidos son inválidos
+            \begin{enumerate}[noitemsep]
+                \item[4.1.1] El sistema muestra un mensaje de error
+                \item[4.1.2] El usuario corrige los datos
+            \end{enumerate}
+        \end{enumerate} \\
+        \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Crear evento (CU08)}
+\end{table}

@@ -1,0 +1,26 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|m{11cm}|}
+        \hline
+        \rowcolor{blue!20} Caso de uso & Unirse a un evento (CU09) \\
+        \hline
+        Actor & Usuario \\
+        \hline
+        \rowcolor{blue!20} Descripción & El usuario podrá unirse a un evento existente dentro de un grupo. \\
+        \hline
+        Pre-condiciones & El usuario tiene la sesión iniciada y es miembro del grupo en el que se encuentra el evento \\
+        \hline
+        \rowcolor{blue!20} Post-condiciones & El usuario queda registrado como participante del evento en la base de datos \\
+        \hline
+        Flujo normal & 
+            \begin{enumerate}[noitemsep]
+            \item El usuario selecciona el grupo en el que se encuentra el evento desde el listado de grupos
+            \item El usuario pulsa en el botón \enquote{Unirse a evento}
+            \item El sistema registra al usuario como participante del evento
+            \item El usuario es redirigido al chat del grupo
+            \end{enumerate}
+         \\
+         \hline
+    \end{tabular}
+    \caption{Especificaciones del caso de uso: Unirse a un evento (CU09)}
+\end{table}
