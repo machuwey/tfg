@@ -1,3 +1,4 @@
+name: Generate PDF
 on:
   push:
     branches:
@@ -20,12 +21,23 @@ jobs:
         mkdir -p build
         mv TFG.pdf build/
 
+    - name: Create index.html for redirect
+      run: |
+        echo '<!DOCTYPE html>' > build/index.html
+        echo '<html>' >> build/index.html
+        echo '<head>' >> build/index.html
+        echo '   <meta http-equiv="refresh" content="0; url=http://tfg.matvey.es/TFG.pdf" />' >> build/index.html
+        echo '</head>' >> build/index.html
+        echo '<body>' >> build/index.html
+        echo '   If you are not redirected, <a href="http://tfg.matvey.es/TFG.pdf">click here</a>.' >> build/index.html
+        echo '</body>' >> build/index.html
+        echo '</html>' >> build/index.html
+
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: build
         branch: gh-pages
 
-       
        
         
