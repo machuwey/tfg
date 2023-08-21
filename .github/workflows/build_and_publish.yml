@@ -20,10 +20,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.4.3
       with:
-        branch: gh-pages
         folder: build
-        single-commit: true
-        commit-message: 'Update PDF'
-        target-folder: '.'
-        clean: true
-        token: ${{ secrets.GH_PATH }}
+       
+       
+        
