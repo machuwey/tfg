@@ -7,6 +7,8 @@
 *.ist
 *.glsdefs
 *.out
+*.yml
+.github/workflows/*
 __pycache__/
 *.py[cod]
 .vscode/
