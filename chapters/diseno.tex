@@ -112,6 +112,32 @@ La vista de registro en donde el visitante procederá a rellenar sus datos tales
         \label{fig:Vista Perfil}
 \end{figure}
 
+\subsection{Estructura del proyecto}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{images/estructuraDelProyecto.png}
+        \caption{Estructura del proyecto}
+        \label{fig:estructuraProyecto}
+\end{figure}
+En la figura \ref{fig:estructuraProyecto} se puede observar la jerarquía del proyecto. A continuación, se detallan los directorios y archivos más relevantes que componen la estructura del proyecto:
+
+\begin{enumerate}
+        \item \textbf{AppDelegate.swift}: Es el archivo encargado de ser el punto de entrada de la aplicación. Configura Firebase, establece la apariencia de la aplicación y administra los eventos del ciclo de vida.
+        \item \textbf{SceneDelegate.swift}: Esta clase es encargada de la gestión de las escenas de la aplicación, incluyendo la configuración del controlador de vista inicial conforme al estado de autenticación del usuario y la gestión de la alternancia entre los modos de visualización.
+        \item \textbf{Router.swift}: La responsabilidad de esta clase radica en la administración de la navegación de la aplicación, determinando qué controlador de vista mostrar en función del estado de autenticación del usuario.
+        \item \textbf{Auth}: Directorio que incluye las clases y recursos asociados con el proceso de autenticación de la aplicación, comprendiendo controladores de vista para el registro, la confirmación por correo electrónico, entre otros.
+        \item \textbf{App}: Directorio que alberga las clases y recursos correspondientes a la parte principal de la aplicación, siendo el punto de interacción para los usuarios una vez iniciada la sesión.
+        \item \textbf{Services}: Directorio que agrupa los servicios empleados en la aplicación, es decir, las clases que se encargan de la comunicación con la base de datos.
+        \item \textbf{Models}: Directorio que contiene los modelos de datos empleados en la aplicación.
+        \item \textbf{CustomViews}: Directorio en el cual se encuentran componentes de interfaz de usuario personalizados, utilizados en distintas partes de la aplicación.
+        \item \textbf{Animations}: Directorio que alberga archivos de animación empleados en la aplicación.
+        \item \textbf{Assets.xcassets}: Directorio que incluye los activos de imagen y color que se utilizan en la aplicación.
+        \item \textbf{Fonts}: Directorio que contiene las fuentes tipográficas personalizadas que se emplean en la aplicación.
+        \item \textbf{Localization}: La aplicación admite la localización, reflejada en la presencia de archivos de storyboard y archivos de cadena localizados, como es.lproj/Auth.strings y en.lproj/Localizable.strings.
+        \item \textbf{komunit\_uikit.xcodeproj}: Archivo de proyecto de Xcode que reúne todas las configuraciones relacionadas con el proyecto.
+\end{enumerate}
+
+
 
 
 
