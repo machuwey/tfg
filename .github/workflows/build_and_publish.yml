@@ -1,5 +1,3 @@
-name: Build LaTeX and Publish PDF
-
 on:
   push:
     branches:
@@ -17,11 +15,17 @@ jobs:
       with:
         root_file: TFG.tex
 
+    - name: Move PDF to build folder
+      run: |
+        mkdir -p build
+        mv TFG.pdf build/
+
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: TFG.pdf
+        folder: build
         branch: gh-pages
+
        
        
         
