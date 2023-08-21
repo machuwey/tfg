@@ -18,7 +18,7 @@ jobs:
         root_file: TFG.tex
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.5
+      uses: JamesIves/github-pages-deploy-action@4.4.3
       with:
         branch: gh-pages
         folder: build
