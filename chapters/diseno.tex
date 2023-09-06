@@ -133,6 +133,7 @@ Vista desde la que se puede gestionar un evento o crear la asistencia a dicho ev
         \caption{Vista apuntarse a evento}
         \label{fig:Vista unirse evento}
 \end{figure}
+Cabe destacar que cuando varios usuarios indiquen preferencia horaria para un evento que es flexible, el creador del evento podrá visualizar a través de un gráfico de barras a modo de mapa de calor cuáles son las horas dónde estan disponibles dichos usuarios.
 
 \subsection{Estructura del proyecto}
 \begin{figure}[H]
@@ -160,7 +161,61 @@ En la figura \ref{fig:estructuraProyecto} se puede observar la jerarquía del pr
 \end{enumerate}
 
 \subsection{Sistema de moderación de contenido}
-Para garantizar la integridad y la adecuación del contenido en las descripciones de los grupos, se ha implementado un sistema de moderación de contenido. Este sistema funciona como un filtro, de tal manera que durante la creación o edición de un grupo, el contenido proporcionado por el usuario es analizado. Se utiliza un modelo de OpenAI que devuelve un objeto JSON con un indicador (flag) que señala si el contenido es inapropiado o no. Si el sistema detecta contenido inapropiado, se impide la publicación del mismo, garantizando así un ambiente seguro y respetuoso para todos los usuarios.
+Para garantizar la integridad y la adecuación del contenido en las descripciones de los grupos, se ha implementado un sistema de moderación de contenido. Este sistema funciona como un filtro, de tal manera que durante la creación o edición de un grupo, el contenido proporcionado por el usuario es analizado. 
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codeblue}{rgb}{0,0,0.6}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},  
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeblue},
+    numberstyle=\tiny\color{codegray},
+    numbers=left,
+}
+
+\lstset{style=mystyle}
+\begin{lstlisting}[language=Bash, caption={Respuesta JSON del modelo de moderación de OpenAI}, label=lst:openai_response, captionpos=b]
+{
+  "id": "modr-XXXXX",
+  "model": "text-moderation-005",
+  "results": [
+    {
+      "flagged": true,
+      "categories": {
+        "sexual": false,
+        "hate": false,
+        "harassment": false,
+        "self-harm": false,
+        "sexual/minors": false,
+        "hate/threatening": false,
+        "violence/graphic": false,
+        "self-harm/intent": false,
+        "self-harm/instructions": false,
+        "harassment/threatening": true,
+        "violence": true,
+      },
+      "category_scores": {
+        "sexual": 1.2282071e-06,
+        "hate": 0.010696256,
+        "harassment": 0.29842457,
+        "self-harm": 1.5236925e-08,
+        "sexual/minors": 5.7246268e-08,
+        "hate/threatening": 0.0060676364,
+        "violence/graphic": 4.435014e-06,
+        "self-harm/intent": 8.098441e-10,
+        "self-harm/instructions": 2.8498655e-11,
+        "harassment/threatening": 0.63055265,
+        "violence": 0.99011886,
+      }
+    }
+  ]
+}
+\end{lstlisting}
+
+
+Se utiliza un modelo de OpenAI\cite{REF10}  que devuelve un objeto JSON que se puede observar en el fragmento~\ref{lst:openai_response} con un indicador de tipo booleano que señala si el contenido es inapropiado o no. Si el sistema detecta contenido inapropiado, se impide la publicación del mismo, garantizando así un ambiente seguro y respetuoso para todos los usuarios.
 
 
 
