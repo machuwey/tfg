@@ -159,6 +159,9 @@ En la figura \ref{fig:estructuraProyecto} se puede observar la jerarquía del pr
         \item \textbf{komunit\_uikit.xcodeproj}: Archivo de proyecto de Xcode que reúne todas las configuraciones relacionadas con el proyecto.
 \end{enumerate}
 
+\subsection{Sistema de moderación de contenido}
+Para garantizar la integridad y la adecuación del contenido en las descripciones de los grupos, se ha implementado un sistema de moderación de contenido. Este sistema funciona como un filtro, de tal manera que durante la creación o edición de un grupo, el contenido proporcionado por el usuario es analizado. Se utiliza un modelo de OpenAI que devuelve un objeto JSON con un indicador (flag) que señala si el contenido es inapropiado o no. Si el sistema detecta contenido inapropiado, se impide la publicación del mismo, garantizando así un ambiente seguro y respetuoso para todos los usuarios.
+
 
 
 
