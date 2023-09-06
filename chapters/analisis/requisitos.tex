@@ -13,17 +13,18 @@
             \item \textbf{RF10. Chat grupal}: El usuario, podrá usar el correspondiente chat de grupo para mandar mensajes en tiempo real en el chat grupal asociado al grupo.
             \item \textbf{RF11. Crear evento}: El usuario propietario del grupo, podrá crear y planificar una actividad a la que los demás miembros del grupo podrán unirse.
             \item \textbf{RF12. Unirse a evento}: El usuario podrá unirse a un evento creado por el propietario del grupo.
+            \item \textbf{RF13. Reportar contenido}: El usuario podrá reportar ya sea mensaje o la descripción de un grupo si según su valoración se trata de contenido que pueda resultar ofensivo. Este reporte quedará grabado en base de datos para ser atendido por el correspondiente responsable de la aplicación.
         \end{itemize}
 
     \section{Requisitos no funcionales}
         \begin{itemize}
         \item \textbf{RNF0. Confirmación de correo electrónico}: Como medida de seguridad, se requerirá que los usuarios confirmen su dirección de correo electrónico antes de poder acceder a la aplicación. Esto ayudará a prevenir el uso indebido y garantizará que los correos enviados por la aplicación lleguen a los usuarios correctos.
-        \item \textbf{RNF1. Límite de creación de grupos}: Para evitar la sobrecarga del sistema, cada usuario solo podrá crear un máximo de dos grupos.
-        \item \textbf{RNF2. Límite de grupos}: Un usuario solo puede ser miembro de 4 grupos simultáneamente.
+        \item \textbf{RNF1. Límite de creación de grupos}: Para evitar la sobrecarga del sistema y hacer uso indebido de la aplicación, cada usuario solo podrá crear un máximo de dos grupos.
+        \item \textbf{RNF2. Límite de grupos}: Un usuario solo puede ser miembro de 4 grupos simultáneamente. Se considera que formar parte de un mayor número de grupos disminuiría la calidad de participación por grupo del usuario.
         \item \textbf{RNF3. Rendimiento}: La aplicación debe ser capaz de manejar un gran número de usuarios simultáneamente sin degradar la calidad del servicio.
         \item \textbf{RNF4. Seguridad}: Los datos del usuario, incluyendo información personal y contraseñas, deben ser almacenados de manera segura para prevenir el acceso no autorizado.
         \item \textbf{RNF5. Internacionalización}: La aplicación deberá estar disponible en inglés y español para facilitar su uso a un público más amplio.
         \item \textbf{RNF6. Modo claro/oscuro}: La aplicación deberá permitir a los usuarios cambiar entre un modo claro y oscuro, mejorando así la experiencia del usuario y permitiéndole adaptar la interfaz a sus preferencias personales.
-        \item \textbf{RNF7. Eliminación de cuenta}: El usuario podrá eliminar su cuenta en cualquier momento, eliminando así todos los datos asociados a la misma.
+        \item \textbf{RNF7. Eliminación de cuenta}: El usuario podrá eliminar su cuenta en cualquier momento, eliminando así todos los datos asociados a la misma. Además es necesario ofrecer esta funcionalidad en que es requerida por Apple \cite{REF9} a la hora de publicar la aplicación.
 
     \end{itemize}
