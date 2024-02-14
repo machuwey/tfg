@@ -11,7 +11,7 @@
 
 ## Contenido
 
-El archivo de configuración principal es `tfgconf.sty` y contiene la mayoría de opciones y paquetes usados.
+El archivo de configuración principal es `tfgconf.sty` y contiene la mayoría de opciones y paquetes usados. Test
 
 En un principio, está configurada para Español, pero en el archivo de configuración se puede alternar fácilmente.
 
