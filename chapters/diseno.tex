@@ -158,9 +158,20 @@ En la figura \ref{fig:estructuraProyecto} se puede observar la jerarquía del pr
         \item \textbf{Fonts}: Directorio que contiene las fuentes tipográficas personalizadas que se emplean en la aplicación.
         \item \textbf{Localization}: La aplicación admite la localización, reflejada en la presencia de archivos de storyboard y archivos de cadena localizados, como es.lproj/Auth.strings y en.lproj/Localizable.strings.
         \item \textbf{komunit\_uikit.xcodeproj}: Archivo de proyecto de Xcode que reúne todas las configuraciones relacionadas con el proyecto.
-
-        
 \end{enumerate}
+
+\subsection{Arquitectura utilizada}
+La mayor parte de la aplicación está construida utilizando el Modelo-Vista-Controlador (MVC), 
+que es un patrón de diseño de software que separa los datos de una aplicación, la interfaz de usuario y 
+la lógica de control en tres componentes distintos. 
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.66\linewidth]{images/realidad_mvc.png}
+        \caption{Modelo-Vista-Controlador}
+        \label{fig:MVC}
+\end{figure}
+Sin embargo, en la parte de la comunicación con la base de datos se ha utilizado el patrón de diseño Singleton, 
+que garantiza que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.
 
 \subsection{Sistema de moderación de contenido}
 Para garantizar la integridad y la adecuación del contenido en las descripciones de los grupos, se ha implementado un sistema de moderación de contenido. Este sistema funciona como un filtro, de tal manera que durante la creación o edición de un grupo, el contenido proporcionado por el usuario es analizado. 
